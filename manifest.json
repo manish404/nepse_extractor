@@ -1,13 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "Chrome Extension v3 Starter",
-    "description": "A minimal example of a chrome extension using manifest v3",
-    "version": "0.0.1",
-    "action": {
-        "default_title": "NPStock",
-        "default_popup": ""
-    },
-    "permissions": [
-        "https://www.nepalstock.com.np/"
-    ]
+  "manifest_version": 3,
+  "name": "NPStock",
+  "description": "nepalstock",
+  "version": "0.0.1",
+  "action": {
+    "default_title": "NPStock",
+    "default_popup": ""
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nepalstock.com.np/live-market"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ]
 }
